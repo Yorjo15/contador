@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txt_numero"
-        android:layout_width="402dp"
-        android:layout_height="280dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_weight="1"
         android:background="#EDF424"
         android:text="@string/numero"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_primary"
         android:textColorHighlight="@color/black"
-        android:textSize="80sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="80sp" />
 
     <Button
         android:id="@+id/bt_contador"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
+        android:layout_weight="2"
+        android:onClick="contar"
         android:padding="15dp"
         android:text="@string/contador"
-        android:textSize="20sp"
-        android:onClick="contar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_numero" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/bt_reset"
-        android:layout_width="106dp"
+        android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="152dp"
-        android:text="@string/reset"
+        android:layout_weight="1"
         android:onClick="resetear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="@string/reset" />
+</LinearLayout>
